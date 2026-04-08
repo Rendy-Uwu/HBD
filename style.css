@@ -18,12 +18,13 @@ html, body {
 
 .card {
   position: relative;
-  width: 390px;
-  height: 550px;
+  width: 90%;
+  max-weidth: 390px;
+  height: 520px;
   border: 10px solid var(--border-color);
-  margin: 0;
-  box-shadow: inset 10px 0px 15px 0px rgba(0,0,0,0.1);
-  background-color: rgb(230, 190, 250);
+  margin: 20px auto;
+  cursor: pointer;
+  transition: all 0.08s ease-in-out;
 }
 
 .card .text-container {
@@ -347,5 +348,21 @@ animation: flicker 1s ease-in-out infinite;
       0 0 20px rgba(255, 165, 0, 0.5),
       0 0 60px rgba(255, 165, 0, 0.5),
       0 0 80px rgba(255, 165, 0, 0.5);
+  }
+
+  /* Responsif untuk HP */
+@media (max-width: 480px) {
+  .card {
+    width: 92%;
+    height: 480px;           /* Sedikit lebih pendek di HP */
+    border-width: 8px;       /* Border agak tipis biar muat */
+  }
+
+  .card .text-container #head {
+    font-size: 2.1em;        /* Teks judul agak kecil di HP */
+  }
+
+  .card p, .card .text-container > div {
+    font-size: 1.25em;
   }
 }
